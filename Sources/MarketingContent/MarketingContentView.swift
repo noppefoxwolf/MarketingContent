@@ -13,16 +13,19 @@ public struct MarketingContentView: View {
         TabView {
             Tab {
                 FeaturesContentView(marketingContent: marketingContent)
+                    .safeAreaPadding(.top, 20)
                     .safeAreaPadding(.bottom, 64)
                     .modifier(SpecificHeightMaskModifier(height: 32))
             }
             Tab {
                 ReviewsContentView(marketingContent: marketingContent)
+                    .safeAreaPadding(.top, 20)
                     .safeAreaPadding(.bottom, 64)
                     .modifier(SpecificHeightMaskModifier(height: 32))
             }
             Tab {
                 FAQsContentView(marketingContent: marketingContent)
+                    .safeAreaPadding(.top, 20)
                     .safeAreaPadding(.bottom, 64)
                     .modifier(SpecificHeightMaskModifier(height: 32))
             }
