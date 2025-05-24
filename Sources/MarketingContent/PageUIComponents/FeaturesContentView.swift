@@ -1,0 +1,58 @@
+import SwiftUI
+
+struct FeaturesContentView: View {
+    @State
+    var marketingContent: MarketingContent
+    
+    var body: some View {
+        ScrollView(.vertical) {
+            LazyVStack(spacing: 20) {
+                marketingContent.image?
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 100, height: 100)
+                    .mask(RoundedRectangle(cornerRadius: 32))
+                    .padding()
+                
+                Section {
+                    features()
+                        .padding(.horizontal)
+                } header: {
+                    VStack(alignment: .leading) {
+                        marketingContent.headlineText
+                            .font(.title)
+                            .bold()
+                        
+                        marketingContent.subheadlineText?
+                            .foregroundStyle(.secondary)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func features() -> some View {
+        VStack(alignment: .leading, spacing: 8, content: {
+            ForEach(marketingContent.features, id: \.id) { feature in
+                Label(
+                    title: {
+                        feature.title
+                    },
+                    icon: {
+                        feature.image
+                    }
+                )
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        })
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(content: {
+            RoundedRectangle(cornerRadius: 12)
+                .foregroundStyle(.background.secondary)
+        })
+    }
+}
