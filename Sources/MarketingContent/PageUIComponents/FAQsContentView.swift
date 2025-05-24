@@ -13,7 +13,7 @@ struct FAQsContentView: View {
                 .padding(.horizontal)
             }
         } header: {
-            Text("Questions? Answers.")
+            Text("Questions? Answers.", bundle: .module)
                 .modifier(SectionTitleTextModifier())
         }
     }
