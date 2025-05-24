@@ -1,7 +1,6 @@
 import SwiftUI
 
 public struct MarketingContent: Sendable {
-    let title: Text
     let image: Image?
     let headlineText: Text
     let subheadlineText: Text?
@@ -11,7 +10,6 @@ public struct MarketingContent: Sendable {
     let faqs: [any FAQ]
     
     public init(
-        title: Text,
         image: Image?,
         headlineText: Text,
         subheadlineText: Text?,
@@ -20,7 +18,6 @@ public struct MarketingContent: Sendable {
         reviews: [any Review],
         faqs: [any FAQ]
     ) {
-        self.title = title
         self.image = image
         self.headlineText = headlineText
         self.subheadlineText = subheadlineText

@@ -11,7 +11,12 @@ struct FeaturesContentView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 100, height: 100)
-                    .mask(RoundedRectangle(cornerRadius: 32))
+                    .mask(RoundedRectangle(cornerRadius: 26))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 26)
+                            .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                            .blendMode(.overlay)
+                    }
                     .padding()
                 
                 Section {

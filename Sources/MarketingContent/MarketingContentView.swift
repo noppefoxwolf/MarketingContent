@@ -31,10 +31,7 @@ public struct MarketingContentView: View {
             }
         }
         .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
-        .navigationTitle(marketingContent.title)
-        .navigationBarTitleDisplayMode(.inline)
-        
+        .indexViewStyle(.page(backgroundDisplayMode: .always))        
     }
 }
 

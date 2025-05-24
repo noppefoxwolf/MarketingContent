@@ -31,7 +31,6 @@ struct AppStoreReview: Review {
 extension MarketingContent {
     static var example: MarketingContent {
         MarketingContent(
-            title: Text("Example Pro"),
             image: Image(.image),
             headlineText: Text("Unlock all features"),
             subheadlineText: Text("undreds of exclusive features"),
