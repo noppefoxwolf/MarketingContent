@@ -2,13 +2,11 @@
 
 A SwiftUI library for creating beautiful marketing content pages for your iOS app subscriptions and premium features.
 
-![](.github/example.gif)
-
 ## Overview
 
 MarketingContent is a Swift Package that provides a set of UI components to present your app's features, reviews, and FAQs in an elegant and engaging way. It's specifically designed to complement subscription offerings and showcase the value of your premium features.
 
-<img src="Example/Example/Assets.xcassets/image.imageset/image.png" width="300" alt="MarketingContent Example">
+<img src=".github/example.gif" width="300" alt="MarketingContent Example">
 
 ## Features
 
