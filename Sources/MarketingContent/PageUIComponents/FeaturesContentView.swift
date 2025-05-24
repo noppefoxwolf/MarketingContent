@@ -35,7 +35,7 @@ struct FeaturesContentView: View {
     
     @ViewBuilder
     func features() -> some View {
-        VStack(alignment: .leading, spacing: 8, content: {
+        VStack(alignment: .leading, spacing: 16, content: {
             ForEach(marketingContent.features, id: \.id) { feature in
                 Label(
                     title: {
@@ -43,6 +43,7 @@ struct FeaturesContentView: View {
                     },
                     icon: {
                         feature.image
+                            .frame(minWidth: 36)
                     }
                 )
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -51,7 +52,7 @@ struct FeaturesContentView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(content: {
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 16)
                 .foregroundStyle(.background.secondary)
         })
     }

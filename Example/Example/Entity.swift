@@ -21,11 +21,11 @@ struct AppFeature: Feature {
 
 struct AppStoreReview: Review {
     var id: UUID = UUID()
-    var rate: Double = 3.7
-    var title: Text = Text("title")
-    var reviewer: Text = Text("username")
-    var message: Text? = Text("message")
-    var image: Image? = Image(systemName: "house")
+    var rate: Double
+    var title: Text
+    var reviewer: Text
+    var message: Text?
+    var image: Image?
 }
 
 extension MarketingContent {
@@ -51,8 +51,12 @@ extension MarketingContent {
                 AppAward(title: Text("AppStore\nRanking 1st")),
             ],
             reviews: [
-                AppStoreReview(),
-                AppStoreReview(),
+                AppStoreReview(
+                    rate: 3,
+                    title: Text("Title"),
+                    reviewer: Text("username"),
+                    message: Text("Message")
+                )
             ],
             faqs: [
                 AppFAQ(

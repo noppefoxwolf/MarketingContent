@@ -13,18 +13,25 @@ public struct MarketingContentView: View {
         TabView {
             Tab {
                 FeaturesContentView(marketingContent: marketingContent)
+                    .safeAreaPadding(.bottom, 64)
+                    .modifier(SpecificHeightMaskModifier(height: 32))
             }
             Tab {
                 ReviewsContentView(marketingContent: marketingContent)
+                    .safeAreaPadding(.bottom, 64)
+                    .modifier(SpecificHeightMaskModifier(height: 32))
             }
             Tab {
                 FAQsContentView(marketingContent: marketingContent)
+                    .safeAreaPadding(.bottom, 64)
+                    .modifier(SpecificHeightMaskModifier(height: 32))
             }
         }
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
         .navigationTitle(marketingContent.title)
         .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 

@@ -15,6 +15,15 @@ struct ContentView: View {
                 }
             )
             .subscriptionStoreControlStyle(.compactPicker)
+//            .subscriptionStoreControlBackground(.bar)
+            .subscriptionStorePolicyDestination(
+                url: URL(string: "https://example.com/policies")!,
+                for: .privacyPolicy
+            )
+            .subscriptionStorePolicyDestination(
+                url: URL(string: "https://example.com/policies")!,
+                for: .termsOfService
+            )
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button {

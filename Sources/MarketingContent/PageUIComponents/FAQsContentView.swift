@@ -5,16 +5,16 @@ struct FAQsContentView: View {
     var marketingContent: MarketingContent
     
     var body: some View {
-        Section {
-            ScrollView {
+        ScrollView {
+            LazyVStack {
+                Text("Questions? Answers.", bundle: .module)
+                    .modifier(SectionTitleTextModifier())
+                
                 ForEach(marketingContent.faqs, id: \.id, content: { faq in
                     FAQView(faq: faq)
                 })
                 .padding(.horizontal)
             }
-        } header: {
-            Text("Questions? Answers.", bundle: .module)
-                .modifier(SectionTitleTextModifier())
         }
     }
 }

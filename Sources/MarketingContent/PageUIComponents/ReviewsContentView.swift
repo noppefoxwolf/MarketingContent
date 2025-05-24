@@ -6,17 +6,10 @@ struct ReviewsContentView: View {
     var marketingContent: MarketingContent
     
     var body: some View {
-        Section {
-            reviews()
-        } header: {
+        ScrollView(.vertical) {
             Text("Reviews", bundle: .module)
                 .modifier(SectionTitleTextModifier())
-        }
-    }
-    
-    @ViewBuilder
-    func reviews() -> some View {
-        ScrollView(.vertical) {
+            
             LazyVStack(spacing: 20) {
                 ScrollView(.horizontal) {
                     LazyHStack(spacing: 12) {
